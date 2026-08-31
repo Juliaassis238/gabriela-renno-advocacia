@@ -1,6 +1,6 @@
-# Padronização do menu
+# Botão de retorno à página inicial
 
-- [ ] Conferir o botão de menu na home e nas quatro páginas internas.
-- [ ] Aplicar o mesmo estilo de caixinha premium em todas as abas.
-- [ ] Garantir o mesmo comportamento de abrir, fechar e responsividade.
+- [ ] Criar o botão Voltar à página inicial.
+- [ ] Inserir o botão em Sobre mim, Áreas de atuação, Autora e Contato.
+- [ ] Ajustar estilo e responsividade.
 - [ ] Sincronizar a alteração no GitHub.
