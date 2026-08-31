@@ -1,6 +1,8 @@
-# Simplificação da capa
+# Revisão da navegação
 
-- [x] Reduzir a quantidade de texto sobre a imagem.
-- [x] Manter apenas identificação, título curto e uma ação principal.
-- [x] Preservar mais área livre e melhorar a leitura da fotografia.
-- [x] Sincronizar a alteração no GitHub.
+- [ ] Auditar os destinos das abas Sobre mim, Áreas de atuação, Autora e Contato.
+- [ ] Melhorar a navegação desktop com estados ativos e espaçamento consistente.
+- [ ] Melhorar o menu mobile com abertura e fechamento corretos.
+- [ ] Garantir que a aba Autora esteja integrada e acessível.
+- [ ] Testar a navegação em desktop e celular.
+- [ ] Sincronizar a revisão no GitHub.

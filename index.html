@@ -97,7 +97,10 @@
     background:var(--bronze);transition:width .3s ease;
   }
   nav.links a:hover{color:var(--bronze-light);}
-  nav.links a:hover::after{width:100%;}
+  nav.links a:hover::after, nav.links a.active::after{width:100%;}
+  nav.links a.active{color:var(--bronze-light);}
+  .mobile-menu{pointer-events:none;visibility:hidden;}
+  .mobile-menu.open{pointer-events:auto;visibility:visible;}
   .nav-cta{
     font-size:13px;letter-spacing:0.18em;text-transform:uppercase;
     border:1px solid var(--bronze);color:var(--bronze-light);
@@ -115,7 +118,11 @@
   .mobile-menu a{
     font-family:'Cormorant Garamond',serif;
     font-size:26px;color:var(--cream);letter-spacing:0.04em;
+    transition:color .25s ease, transform .25s ease;
   }
+  .mobile-menu a.active{color:var(--bronze-light);transform:translateX(4px);}
+  body.menu-open{overflow:hidden;}
+  section[id]{scroll-margin-top:86px;}
   .mobile-menu .nav-cta{margin-top:12px;}
 
   /* ===== HERO ===== */
@@ -213,6 +220,10 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
     font-size:12px;letter-spacing:0.28em;text-transform:uppercase;
   }
   .hero-scroll .line{width:32px;height:1px;background:rgba(255,255,255,0.52);}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .mobile-menu, .mobile-menu a{transition:none;}
+  }
 
   /* ===== AREAS ===== */
   .areas{background:var(--cream);padding:120px 0;}
@@ -480,17 +491,17 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
       <a href="#autora">Autora</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a href="#contato" target="_blank" rel="noopener" class="nav-cta">Conversar sobre meu caso</a>
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    <a href="#contato" class="nav-cta">Conversar sobre meu caso</a>
+    <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <a href="#sobre">Sobre mim</a>
   <a href="#areas">Áreas de atuação</a>
   <a href="#autora">Autora</a>
   <a href="#contato">Contato</a>
-  <a href="#contato" target="_blank" rel="noopener" class="nav-cta">Conversar sobre meu caso</a>
+  <a href="#contato" class="nav-cta">Conversar sobre meu caso</a>
 </div>
 
 <section class="hero" id="top">
@@ -624,7 +635,7 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
       <div class="eyebrow">Vamos conversar</div>
       <h2>Uma conversa pode organizar o próximo passo</h2>
       <p>Entre em contato para apresentar sua questão e entender como uma atuação jurídica estratégica pode contribuir para o seu próximo passo.</p>
-      <a href="#contato" target="_blank" rel="noopener" class="btn-primary" style="color:#151009;">Entrar em contato</a>
+      <a href="#contato" class="btn-primary" style="color:#151009;">Entrar em contato</a>
     </div>
 <div class="cta-img reveal">
       <picture>
@@ -648,10 +659,9 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
       </div>
       <div class="foot-col">
         <h4>Navegação</h4>
-        <a href="#top">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#areas">Áreas de Atuação</a>
-        <a href="#diferenciais">Diferenciais</a>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#areas">Áreas de atuação</a>
+        <a href="#autora">Autora</a>
         <a href="#contato">Contato</a>
       </div>
       <div class="foot-col">
@@ -676,11 +686,36 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
 <script>
   const burger = document.getElementById('burger');
   const menu = document.getElementById('mobileMenu');
-  burger.addEventListener('click', () => {
-    menu.classList.toggle('open');
-  });
-  document.querySelectorAll('.mobile-menu a').forEach(a => {
-    a.addEventListener('click', () => menu.classList.remove('open'));
+  const closeMobileMenu = () => {
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden', 'true');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Abrir menu');
+    document.body.classList.remove('menu-open');
+  };
+  const openMobileMenu = () => {
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden', 'false');
+    burger.setAttribute('aria-expanded', 'true');
+    burger.setAttribute('aria-label', 'Fechar menu');
+    document.body.classList.add('menu-open');
+  };
+  burger.addEventListener('click', () => menu.classList.contains('open') ? closeMobileMenu() : openMobileMenu());
+  document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', closeMobileMenu));
+  window.addEventListener('keydown', e => { if(e.key === 'Escape') closeMobileMenu(); });
+  window.addEventListener('resize', () => { if(window.innerWidth > 980) closeMobileMenu(); });
+
+  const sectionLinks = [...document.querySelectorAll('nav.links a, .mobile-menu a')]
+    .filter(a => ['#sobre','#areas','#autora','#contato'].includes(a.getAttribute('href')));
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      sectionLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+    });
+  }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
+  ['sobre','areas','autora','contato'].forEach(id => {
+    const section = document.getElementById(id);
+    if(section) sectionObserver.observe(section);
   });
 
   const observer = new IntersectionObserver((entries) => {
