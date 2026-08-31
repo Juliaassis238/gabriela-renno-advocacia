@@ -1,7 +1,6 @@
-# Redesign do botão de menu
+# Padronização do menu
 
-- [ ] Criar uma caixinha de menu sofisticada em azul-marinho.
-- [ ] Ajustar ícone, borda, sombra e estados de interação.
-- [ ] Manter abertura e fechamento corretos no mobile.
-- [ ] Verificar a aparência no computador e no celular.
+- [ ] Conferir o botão de menu na home e nas quatro páginas internas.
+- [ ] Aplicar o mesmo estilo de caixinha premium em todas as abas.
+- [ ] Garantir o mesmo comportamento de abrir, fechar e responsividade.
 - [ ] Sincronizar a alteração no GitHub.
