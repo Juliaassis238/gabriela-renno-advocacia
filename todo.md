@@ -1,7 +1,6 @@
-# Correção obrigatória da capa mobile
+# Simplificação da capa
 
-- [ ] Gerar uma imagem própria para celular em proporção vertical 9:16.
-- [ ] Garantir que a capa mobile seja mais próxima e posicionada à esquerda.
-- [ ] Manter a capa horizontal do computador em arquivo separado 16:9.
-- [ ] Substituir a referência mobile no index e no GitHub.
-- [ ] Verificar dimensões, enquadramento e carregamento dos dois arquivos.
+- [x] Reduzir a quantidade de texto sobre a imagem.
+- [x] Manter apenas identificação, título curto e uma ação principal.
+- [x] Preservar mais área livre e melhorar a leitura da fotografia.
+- [x] Sincronizar a alteração no GitHub.
