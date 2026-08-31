@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="preload" as="image" href="gabriela-capa-desktop-final.png" fetchpriority="high" type="image/png">
-  <link rel="preload" as="image" href="gabriela-capa-mobile-final.png" fetchpriority="high" media="(max-width: 768px)" type="image/png">
+  <link rel="preload" as="image" href="gabriela-capa-desktop-azul.webp" fetchpriority="high" type="image/webp">
+  <link rel="preload" as="image" href="gabriela-capa-celular.webp" fetchpriority="high" media="(max-width: 768px)" type="image/webp">
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,18 +12,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#151009;
-    --ink-soft:#1e1710;
-    --bronze:#c6a15b;
-    --bronze-light:#e7d4a3;
-    --bronze-deep:#8f6f38;
-    --cream:#f6f1e7;
-    --cream-2:#efe7d6;
-    --paper:#fbf8f2;
-    --text-dark:#2b2318;
-    --text-mute:#6d6353;
-    --line:rgba(198,161,91,0.35);
-    --steel:#7c93a6;
+    --ink:#071a33;
+    --ink-soft:#102f52;
+    --bronze:#9dbbd8;
+    --bronze-light:#e5f0fb;
+    --bronze-deep:#315b86;
+    --cream:#ffffff;
+    --cream-2:#edf5fc;
+    --paper:#ffffff;
+    --text-dark:#10243d;
+    --text-mute:#51657d;
+    --line:rgba(49,91,134,0.28);
+    --steel:#7898bb;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -64,10 +64,10 @@
   /* ===== NAV ===== */
   header{
     position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(21,16,9,0.72);
+    background:rgba(7,26,51,0.90);
     backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(198,161,91,0.18);
+    border-bottom:1px solid rgba(157,187,216,0.28);
     transition:background .3s ease;
   }
   .nav{
@@ -127,16 +127,17 @@
     will-change: transform;
     transform: translateZ(0);
     position:absolute;inset:0;
-    background-image: url('gabriela-capa-desktop-final.png');
+    background-image: url('gabriela-capa-desktop-azul.webp');
     background-size:cover;background-position:left center; background-repeat: no-repeat;
   }
 @media (max-width: 768px) {
 		    .hero-bg {
-		      background-image: url('gabriela-capa-mobile-final.png');
-		      background-position: center top;
+background-image: url('gabriela-capa-celular.webp');
+      background-size: auto 100%;
+      background-position: 20% center;
 		    }
 		    .hero-bg::after {
-		      background: linear-gradient(0deg, rgba(15,11,6,0.98) 0%, rgba(15,11,6,0.8) 30%, rgba(15,11,6,0.3) 60%, rgba(15,11,6,0) 100%) !important;
+		      background: linear-gradient(0deg, rgba(7,26,51,0.96) 0%, rgba(7,26,51,0.75) 30%, rgba(7,26,51,0.28) 64%, rgba(7,26,51,0) 100%) !important;
 		    }
 		    .hero-inner {
 		      padding: 80px 20px 40px;
@@ -170,7 +171,7 @@
       display: none;
     }
     #about-photo {
-      content: url('gabriela-sobre.png');
+      content: url('gabriela-sobre.webp');
     }
   }
 
@@ -189,7 +190,7 @@
     display:block;
   }
   .hero p{
-    color:rgba(246,241,231,0.72);font-size:15px;line-height:1.7;
+    color:rgba(255,255,255,0.78);font-size:15px;line-height:1.7;
     max-width:400px;margin-top:20px;font-weight:300;text-align:right;
   }
   .btn-primary{
@@ -201,17 +202,17 @@
   .btn-primary:hover{background:transparent;color:var(--bronze-light);}
   .btn-outline{
     display:inline-block;margin-top:38px;margin-left:18px;
-    color:var(--cream);border:1px solid rgba(246,241,231,0.4);
+    color:var(--cream);border:1px solid rgba(255,255,255,0.52);
     padding:16px 30px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;
     transition:all .35s ease;
   }
   .btn-outline:hover{border-color:var(--bronze);color:var(--bronze-light);}
   .hero-scroll{
     position:absolute;bottom:34px;left:32px;z-index:2;
-    display:flex;align-items:center;gap:12px;color:rgba(246,241,231,0.5);
+    display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.62);
     font-size:10.5px;letter-spacing:0.28em;text-transform:uppercase;
   }
-  .hero-scroll .line{width:32px;height:1px;background:rgba(246,241,231,0.4);}
+  .hero-scroll .line{width:32px;height:1px;background:rgba(255,255,255,0.52);}
 
   /* ===== AREAS ===== */
   .areas{background:var(--cream);padding:120px 0;}
@@ -261,7 +262,7 @@
     margin:16px 0 30px;max-width:520px;
   }
   .about-copy p{
-    color:rgba(246,241,231,0.68);font-size:15.5px;line-height:1.9;
+    color:rgba(255,255,255,0.74);font-size:15.5px;line-height:1.9;
     font-weight:300;max-width:480px;margin-bottom:16px;
   }
   .about-copy .btn-outline{margin-left:0;}
@@ -274,7 +275,7 @@
   }
   .about-sign .sig-role{
     font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;
-    color:rgba(246,241,231,0.5);
+    color:rgba(255,255,255,0.62);
   }
 
   /* ===== DIFERENCIAIS ===== */
@@ -296,7 +297,7 @@
   }
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:64px;}
   .testi-card{
-    border:1px solid rgba(198,161,91,0.28);padding:40px 32px;
+    border:1px solid rgba(157,187,216,0.32);padding:40px 32px;
     background:rgba(255,255,255,0.02);
   }
   .testi-quote-mark{
@@ -310,7 +311,7 @@
   .testi-name{
     font-family:'Cormorant Garamond',serif;font-style:italic;
     font-size:18px;color:var(--bronze-light);
-    border-top:1px solid rgba(198,161,91,0.25);padding-top:16px;
+    border-top:1px solid rgba(157,187,216,0.28);padding-top:16px;
   }
   .testi-portrait{
     display:flex;justify-content:center;margin-top:70px;
@@ -343,7 +344,7 @@
   footer{background:var(--ink);color:rgba(246,241,231,0.7);padding:88px 0 0;}
   .foot-grid{
     display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;
-    padding-bottom:70px;border-bottom:1px solid rgba(198,161,91,0.18);
+    padding-bottom:70px;border-bottom:1px solid rgba(157,187,216,0.28);
   }
   .foot-brand{display:flex;gap:14px;align-items:flex-start;}
   .foot-brand img{height:42px;width:auto;margin-top:2px;}
@@ -355,7 +356,7 @@
     font-size:8.5px;letter-spacing:0.3em;color:var(--bronze);
     text-transform:uppercase;margin-bottom:14px;display:block;
   }
-  .foot-brand p{font-size:13.5px;line-height:1.8;color:rgba(246,241,231,0.5);font-weight:300;max-width:230px;}
+  .foot-brand p{font-size:13.5px;line-height:1.8;color:rgba(255,255,255,0.62);font-weight:300;max-width:230px;}
   .foot-col h4{
     font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
     color:var(--bronze-light);margin-bottom:22px;font-weight:500;
@@ -367,7 +368,7 @@
   .foot-col a:hover{color:var(--bronze-light);}
   .foot-bottom{
     display:flex;justify-content:space-between;align-items:center;
-    padding:28px 0;font-size:12px;color:rgba(246,241,231,0.4);
+    padding:28px 0;font-size:12px;color:rgba(255,255,255,0.52);
     flex-wrap:wrap;gap:10px;
   }
 
@@ -454,7 +455,7 @@
 <header>
   <div class="nav">
     <a href="#top" class="brand">
-      <img src="gabriela-monograma.png" alt="Gabriela Rennó — Advocacia" loading="eager" width="42" height="42" decoding="async">
+      <img src="gabriela-logo-branca.png" alt="Gabriela Rennó — Advocacia" loading="eager" width="42" height="42" decoding="async">
       <div class="brand-text">
         <div class="name">Gabriela Rennó</div>
         <div class="sub">Advocacia</div>
@@ -533,8 +534,8 @@
   <div class="about-grid">
     <div class="about-img reveal">
       <picture>
-        <source srcset="gabriela-sobre.png" type="image/png">
-        <img src="gabriela-sobre.png" alt="Gabriela Rennó em pesquisa jurídica" loading="lazy" decoding="async" id="about-photo">
+        <source srcset="gabriela-sobre.webp" type="image/webp">
+        <img src="gabriela-sobre.webp" alt="Gabriela Rennó em pesquisa jurídica" loading="lazy" decoding="async" id="about-photo">
       </picture>
     </div>
     <div class="about-copy reveal">
@@ -585,11 +586,11 @@
 </section>
 <section class="testi-portrait reveal" style="display:none;">
   <picture>
-    <source srcset="gabriela-contato.png" type="image/png">
-    <img src="gabriela-contato.png" alt="Contato" loading="lazy">
+    <source srcset="gabriela-contato.webp" type="image/webp">
+    <img src="gabriela-contato.webp" alt="Contato" loading="lazy">
   </picture>
   <picture>
-    <source srcset="gabriela-pesquisa.png" type="image/png">
+    <source srcset="gabriela-pesquisa.png" type="image/webp">
     <img src="gabriela-pesquisa.png" alt="Pesquisa jurídica de Gabriela Rennó" loading="lazy">
   </picture>
 </section>
@@ -604,8 +605,8 @@
     </div>
 <div class="cta-img reveal">
       <picture>
-        <source srcset="gabriela-contato.png" type="image/png">
-        <img src="gabriela-contato.png" alt="Dra. Gabriela Rennó" loading="lazy" decoding="async">
+        <source srcset="gabriela-contato.webp" type="image/webp">
+        <img src="gabriela-contato.webp" alt="Dra. Gabriela Rennó" loading="lazy" decoding="async">
       </picture>
     </div>
   </div>
@@ -615,7 +616,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="gabriela-monograma.png" alt="Gabriela Rennó — Advocacia" loading="eager" width="42" height="42" decoding="async">
+        <img src="gabriela-logo-branca.png" alt="Gabriela Rennó — Advocacia" loading="eager" width="42" height="42" decoding="async">
         <div>
           <div class="name">Gabriela Rennó</div>
           <span class="sub">Advocacia</span>
@@ -673,7 +674,7 @@
   const hdr = document.querySelector('header');
   window.addEventListener('scroll', () => {
     const cur = window.scrollY;
-    hdr.style.background = cur > 40 ? 'rgba(21,16,9,0.92)' : 'rgba(21,16,9,0.72)';
+    hdr.style.background = cur > 40 ? 'rgba(21,16,9,0.92)' : 'rgba(7,26,51,0.90)';
     lastScroll = cur;
   });
 </script>
