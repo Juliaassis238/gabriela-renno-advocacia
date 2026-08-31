@@ -1,7 +1,7 @@
-# Revisão visual e performance
+# Correção de enquadramento
 
-- [ ] Criar nova logo PNG transparente nas cores azul-marinho e branco.
-- [ ] Aplicar a nova logo no cabeçalho, rodapé e favicon.
-- [ ] Otimizar capas e fotos internas em formatos leves e responsivos.
-- [ ] Atualizar o index com lazy loading, preload e referências otimizadas.
-- [ ] Verificar e sincronizar a versão final no GitHub.
+- [ ] Recriar a capa mobile em alta resolução, mais próxima e deslocada para a esquerda.
+- [ ] Fazer a foto da seção Sobre preencher todo o fundo, sem bordas laterais.
+- [ ] Ajustar object-fit, object-position e alturas responsivas.
+- [ ] Verificar no mobile e no desktop.
+- [ ] Sincronizar as correções no GitHub.
