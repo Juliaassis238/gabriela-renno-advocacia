@@ -1,7 +1,7 @@
-# Correção de enquadramento
+# Correção obrigatória da capa mobile
 
-- [ ] Recriar a capa mobile em alta resolução, mais próxima e deslocada para a esquerda.
-- [ ] Fazer a foto da seção Sobre preencher todo o fundo, sem bordas laterais.
-- [ ] Ajustar object-fit, object-position e alturas responsivas.
-- [ ] Verificar no mobile e no desktop.
-- [ ] Sincronizar as correções no GitHub.
+- [ ] Gerar uma imagem própria para celular em proporção vertical 9:16.
+- [ ] Garantir que a capa mobile seja mais próxima e posicionada à esquerda.
+- [ ] Manter a capa horizontal do computador em arquivo separado 16:9.
+- [ ] Substituir a referência mobile no index e no GitHub.
+- [ ] Verificar dimensões, enquadramento e carregamento dos dois arquivos.
