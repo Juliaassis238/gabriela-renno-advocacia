@@ -1,8 +1,7 @@
-# Revisão da navegação
+# Navegação por páginas próprias
 
-- [ ] Auditar os destinos das abas Sobre mim, Áreas de atuação, Autora e Contato.
-- [ ] Melhorar a navegação desktop com estados ativos e espaçamento consistente.
-- [ ] Melhorar o menu mobile com abertura e fechamento corretos.
-- [ ] Garantir que a aba Autora esteja integrada e acessível.
-- [ ] Testar a navegação em desktop e celular.
-- [ ] Sincronizar a revisão no GitHub.
+- [ ] Criar páginas separadas para Sobre mim, Áreas de atuação, Autora e Contato.
+- [ ] Substituir links de rolagem por links de páginas.
+- [ ] Criar navegação de retorno e destaque da página ativa.
+- [ ] Garantir comportamento responsivo no celular e computador.
+- [ ] Testar as quatro páginas e sincronizar no GitHub.
