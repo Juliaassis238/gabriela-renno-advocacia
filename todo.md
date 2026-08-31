@@ -1,6 +1,6 @@
-# Botão de retorno à página inicial
+# Restauração da página principal
 
-- [ ] Criar o botão Voltar à página inicial.
-- [ ] Inserir o botão em Sobre mim, Áreas de atuação, Autora e Contato.
-- [ ] Ajustar estilo e responsividade.
-- [ ] Sincronizar a alteração no GitHub.
+- [x] Manter na home todas as informações e seções completas de antes.
+- [x] Manter as abas como páginas complementares com conteúdo detalhado.
+- [x] Conferir navegação entre home e abas.
+- [x] Sincronizar a restauração no GitHub.
