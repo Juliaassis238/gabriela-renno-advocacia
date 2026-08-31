@@ -1,7 +1,7 @@
-# Navegação por páginas próprias
+# Redesign do botão de menu
 
-- [ ] Criar páginas separadas para Sobre mim, Áreas de atuação, Autora e Contato.
-- [ ] Substituir links de rolagem por links de páginas.
-- [ ] Criar navegação de retorno e destaque da página ativa.
-- [ ] Garantir comportamento responsivo no celular e computador.
-- [ ] Testar as quatro páginas e sincronizar no GitHub.
+- [ ] Criar uma caixinha de menu sofisticada em azul-marinho.
+- [ ] Ajustar ícone, borda, sombra e estados de interação.
+- [ ] Manter abertura e fechamento corretos no mobile.
+- [ ] Verificar a aparência no computador e no celular.
+- [ ] Sincronizar a alteração no GitHub.
