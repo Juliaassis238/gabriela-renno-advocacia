@@ -278,6 +278,15 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
     color:rgba(255,255,255,0.62);
   }
 
+  /* ===== AUTORA ===== */
+  .author{background:var(--paper);padding:120px 0;}
+  .author-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:72px;align-items:start;}
+  .author-intro h2{font-size:clamp(32px,4.2vw,48px);color:var(--text-dark);line-height:1.12;margin:16px 0 24px;}
+  .author-intro p{font-size:17px;line-height:1.9;color:var(--text-mute);font-weight:300;max-width:390px;}
+  .publication-shell{border-top:1px solid var(--line);padding-top:24px;}
+  .publication-shell h3{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--text-dark);font-weight:500;margin-bottom:12px;}
+  .publication-placeholder{border:1px solid var(--line);padding:28px 30px;background:rgba(255,255,255,.62);color:var(--text-mute);font-size:16px;line-height:1.75;}
+
   /* ===== DIFERENCIAIS ===== */
   .dif{background:var(--paper);padding:120px 0;}
   .dif-grid{
@@ -390,6 +399,7 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
     .area-card{border-right:none;border-bottom:1px solid var(--line);padding-bottom:34px;}
     .area-card:nth-child(2n){padding-left:34px;}
     .about-grid{grid-template-columns:1fr;}
+    .author-grid{grid-template-columns:1fr;gap:42px;}
     .about-img{min-height:520px;height:520px;}
     .about-img::after{background:linear-gradient(180deg, transparent 60%, var(--ink) 100%);}
     .about-copy{padding:70px 40px;}
@@ -413,6 +423,9 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
     .areas-grid{grid-template-columns:1fr;row-gap:44px;}
     .area-card:nth-child(2n){padding-left:0;}
     .about-copy{padding:56px 24px;}
+    .author{padding:80px 0;}
+    .author-grid{gap:34px;}
+    .publication-placeholder{padding:22px;}
     .about-img{min-height:460px;height:460px;}
     .about-img img{object-position:center 30%;}
     .dif{padding:80px 0;}
@@ -462,10 +475,9 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
       </div>
     </a>
     <nav class="links">
-      <a href="#top">Home</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#areas">Áreas de Atuação</a>
-      <a href="#diferenciais">Diferenciais</a>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#areas">Áreas de atuação</a>
+      <a href="#autora">Autora</a>
       <a href="#contato">Contato</a>
     </nav>
     <a href="#contato" target="_blank" rel="noopener" class="nav-cta">Conversar sobre meu caso</a>
@@ -474,10 +486,9 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#top">Home</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#areas">Áreas de Atuação</a>
-  <a href="#diferenciais">Diferenciais</a>
+  <a href="#sobre">Sobre mim</a>
+  <a href="#areas">Áreas de atuação</a>
+  <a href="#autora">Autora</a>
   <a href="#contato">Contato</a>
   <a href="#contato" target="_blank" rel="noopener" class="nav-cta">Conversar sobre meu caso</a>
 </div>
@@ -547,6 +558,20 @@ background-image: url('gabriela-capa-mobile-9x16-final.webp');
         <span class="sig-name">Gabriela Rennó</span>
         <span class="sig-role">Advocacia • Doutoranda em Direito USP</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="author" id="autora">
+  <div class="wrap author-grid">
+    <div class="author-intro reveal">
+      <div class="eyebrow">Autora</div>
+      <h2>Publicações e produção intelectual</h2>
+      <div class="rule left"></div>
+    </div>
+    <div class="publication-shell reveal">
+      <h3>Links das publicações</h3>
+      <div class="publication-placeholder">Esta área está preparada para receber os links das publicações. Os títulos, descrições e endereços corretos serão inseridos quando você enviar as informações.</div>
     </div>
   </div>
 </section>
