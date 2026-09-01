@@ -1,6 +1,6 @@
-# Restauração da página principal
+# Home completa
 
-- [x] Manter na home todas as informações e seções completas de antes.
-- [x] Manter as abas como páginas complementares com conteúdo detalhado.
-- [x] Conferir navegação entre home e abas.
-- [x] Sincronizar a restauração no GitHub.
+- [ ] Garantir que o conteúdo da home não fique oculto após a capa.
+- [ ] Exibir Sobre mim, Áreas de atuação, Autora, Diferenciais e Contato na mesma página.
+- [ ] Corrigir altura, overflow ou estilos que estejam escondendo as seções.
+- [ ] Verificar a home no GitHub Pages e sincronizar a correção.
